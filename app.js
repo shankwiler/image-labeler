@@ -5,6 +5,7 @@ let server = require('http').createServer(app)
 let io = require('socket.io')(server)
 let https = require('https')
 
+let port = process.env.PORT || 3000
 //let imgurAPIKey = process.env.IMGUR_API_ID
 let consumerKey = process.env.CONSUMER_KEY
 //if (!imgurAPIKey) {
@@ -20,12 +21,12 @@ let socketsRooms = {}
 // images is an array of urls to images to be used in the game
 let images = []
 
-server.listen(3000, () => {
+server.listen(port, () => {
   // initialize images with some urls
   pullImages((urls) => {
     images = images.concat(urls)
   })
-  console.log('running on port 3000')
+  console.log(`running on port ${port}`)
 })
 
 app.use(express.static('public'))
