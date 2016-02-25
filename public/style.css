@@ -331,14 +331,14 @@ tr:last-child > * {
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   z-index: 2;
   border-right: none;
-  animation: rotate 30s linear;
+  animation: rotate 25s linear;
 }
 
 .fill.begin {
   border-radius: 0 100% 100% 0 / 0 50% 50% 0;
   z-index: 1;
   border-left: none;
-  animation: opa 30s steps(1, end) reverse;
+  animation: opa 25s steps(1, end) reverse;
   left: 50%;
   opacity: 0;
 }
@@ -354,7 +354,7 @@ tr:last-child > * {
   z-index: 3;
   opacity: 1;
   background-color: white;
-  animation: opa 30s steps(1, end);
+  animation: opa 25s steps(1, end);
 }
 
 @keyframes rotate {

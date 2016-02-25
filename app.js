@@ -118,8 +118,8 @@ function timeRounds(room) {
   }
   // room is inactive until the images have loaded and the round has begun
   rooms[room]['active'] = false
-  let roundLength = 5000
-  let numRounds = 2
+  let roundLength = 25000
+  let numRounds = 3
   if (rooms[room]['roundNum'] <= numRounds) {
     nextImage((img) => {
       io.to(room).emit('ready', {
@@ -207,7 +207,7 @@ function nextImage(cb) {
 }
 
 function pullImages(cb) {
-/*  let options = {
+  let options = {
     'hostname': 'api.500px.com',
     'path': `/v1/photos?feature=fresh_today&image_size=image_size=3,440,600&consumer_key=${consumerKey}`
   }
@@ -231,8 +231,7 @@ function pullImages(cb) {
     })
   })
   req.end()
-  req.on('error', console.log)*/
-  cb(['https://drscdn.500px.org/photo/141790243/w%3D440_h%3D440/52553730ebca05f3d64ae6f33f22b5dc?v=3'])
+  req.on('error', console.log)
 }
 
 function generateInfo(room, socketId) {
