@@ -1,0 +1,15 @@
+{
+  "name": "image-labeler",
+  "version": "1.0.0",
+  "description": "image label game inspired by google's old image labeler",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kyle shankwiler",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}

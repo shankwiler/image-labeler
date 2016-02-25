@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title></title>
+</head>
+<body>
+  <div class="overlay">
+    <div class="page-cover"></div>
+    <div class="info-box">
+      <h1>image labeler</h1>
+      <p>Welcome to image labeler. It is exactly what it sounds like.</p>
+      <div class="description-list">
+        <ul>
+          <li>Inspired by <a href=
+          "https://en.wikipedia.org/wiki/Google_Image_Labeler" target="_blank">
+            Google Image Labeler</a>
+          </li>
+          <li>Join a partner and rack up points by labeling images with the
+          same label as your partner</li>
+          <li>You have 30 seconds per image, and you can enter as many labels
+          as you want</li>
+          <li>The longer the label (in words), the more points you get</li>
+          <li>Built with node.js and socket.io. <a href="" target="_blank">View
+          the project on Github</a>
+          </li>
+        </ul>
+      </div><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!--why do i need this -->
+      <div class="btn-container">
+        <button class="play-btn">Play</button>
+      </div>
+    </div>
+    <div class="stats-container">
+      <div class="stats">
+        <div class="image-container"><img src=""></div>
+        <table class="stats-table">
+          <tr class="points">
+            <th>points</th>
+            <td></td>
+          </tr>
+          <tr class="both">
+            <th>both</th>
+            <td>
+              <div class="stats-labels">
+                <ul class="label-list"></ul>
+              </div>
+            </td>
+          </tr>
+          <tr class="yours">
+            <th>yours</th>
+            <td>
+              <div class="stats-labels">
+                <ul class="label-list"></ul>
+              </div>
+            </td>
+          </tr>
+          <tr class="theirs">
+            <th>theirs</th>
+            <td>
+              <div class="stats-labels">
+                <ul class="label-list"></ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="arrow arrow-right">
+        <div class="triangle-container">
+          <div class="triangle-right"></div>
+        </div>
+      </div>
+      <div class="arrow arrow-left">
+        <div class="triangle-container">
+          <div class="triangle-left"></div>
+        </div>
+      </div>
+      <div class="play-again-btn">
+        <div class="play-again-text">
+          Play Again
+        </div>
+        <div class="waiting-text">
+          Waiting for a partner...
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="game">
+    <div class="info">
+      <!-- Timer inspired by https://css-tricks.com/css-pie-timer/ -->
+      <div class="time-container">
+        <div class="time-inside">
+          <div class="time-cover">
+            <div class="time-cover-in">
+              <div class="time-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timer">
+        <div class="spinner pie"></div>
+        <div class="fill pie"></div>
+        <div class="cover"></div>
+      </div><input class="label-input" placeholder="Enter an image label">
+      <div class="labels">
+        <ul class="label-list"></ul>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image"></div>
+    </div>
+  </div>
+  <footer>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    </script> 
+    <script src="socket.io/socket.io.js">
+    </script> 
+    <script src="index.js">
+    </script>
+  </footer>
+</body>
+</html>

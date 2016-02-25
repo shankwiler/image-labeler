@@ -1,0 +1,464 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  overflow: hidden;
+  font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.overlay {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: #4C4C4C;
+}
+
+.stats-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: fixed;
+}
+
+.stats {
+  z-index: 100;
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.stats-labels {
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+table {
+  width: 100%;
+  height: 50%;
+  border-spacing: 0px;
+  border: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+}
+
+th {
+  width: 30%;
+  background-color: #63CDF7;
+}
+
+th {
+  font-size: 4vh;
+  color: white;
+}
+
+tr {
+  height: 25%;
+}
+
+tr > * {
+  border-bottom: 1px solid black;
+}
+
+tr:last-child > * {
+  border-bottom-style: none;
+}
+
+.theirs th {
+  border-bottom-left-radius: 4px;
+}
+
+.points td {
+  text-align: center;
+  font-size: 7vh;
+}
+
+.stats .image-container {
+  height: 50%;
+  width: 100%;
+  min-width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.stats .image-container img {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  width: 60px;
+  height: 100px;
+  background-color: #d93434;
+  position: absolute;
+}
+
+.arrow:hover, .play-again-btn:hover {
+  background-color: #de5454;
+  cursor: pointer;
+}
+
+.arrow-right {
+  top: 30%;
+  left: 75%;
+  transform: translate(0, -50%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.arrow-left {
+  top: 30%;
+  right: 75%;
+  transform: translate(0, -50%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.triangle-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.triangle-right {
+  position: absolute;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid white;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -20px;
+}
+
+.triangle-left {
+  position: absolute;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 40px solid white;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -20px;
+}
+
+.play-again-btn {
+  position: absolute;
+  background-color: #d93434;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 30%;
+  height: 10%;
+  max-width: 30%;
+  max-height: 10%;
+  top: calc(90% - 6px); /* 6px worth of borders */
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-align: center;
+}
+
+.play-again-text {
+  font-size: 8vh;
+}
+
+.waiting-text {
+  font-size: 3vh;
+  line-height: 300%;
+}
+
+.info-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  opacity: 1;
+  z-index: 100;
+  color: black;
+  width: 75%;
+  padding-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-box h1, p {
+  text-align: center;
+}
+
+.description-list {
+  margin: 0 auto;
+}
+
+.description-list li {
+  float: left;
+  text-align: left;
+}
+
+.btn-container {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.play-btn {
+  display: inline-block;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #d93434;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+}
+
+.play-btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.game {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 0px;
+  width: 100%;
+  height: 200px;
+}
+
+.timer, .label-input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.time-container {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 30px;
+  z-index: 4;
+}
+
+.time-inside {
+  position: relative;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.time-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.time-cover-in {
+  position: relative;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.time-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin-left: 30px;
+  padding: 0 0 0 0;
+}
+
+.timer, .timer * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pie {
+  width: 50%;
+  height: 100%;
+  transform-origin: 100% 50%;
+  position: absolute;
+  background: red;
+}
+
+.spinner.begin {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  z-index: 2;
+  border-right: none;
+  animation: rotate 30s linear;
+}
+
+.fill.begin {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  z-index: 1;
+  border-left: none;
+  animation: opa 30s steps(1, end) reverse;
+  left: 50%;
+  opacity: 0;
+}
+
+.cover.begin {
+  width: calc(50% + 1px);
+  height: calc(100% + 1px);
+  left: -1px;
+  top: -1px;
+  position: absolute;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  z-index: 3;
+  opacity: 1;
+  background-color: white;
+  animation: opa 30s steps(1, end);
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes opa {
+  0%        { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.label-input {
+  position: absolute;
+  left: 220px;
+  top: 0px;
+  height: 30px;
+  width: calc(100% - 240px);
+  border: 2px solid black;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+.label-input:focus {
+  outline: 0;
+}
+
+.labels {
+  position: absolute;
+  left: 220px;
+  top: 34px;
+  width: calc(100% - 243px);
+  max-width: calc(100% - 243px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 110px;
+  border: 2px solid black;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.label-list {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.label-list li {
+  float: left;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.label-container {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.good {
+  background-color: #ccffcc;
+}
+
+.bad {
+  background-color: #ffc3ce;
+}
+
+.image-container {
+  /* thanks to http://lea.verou.me/css3patterns/ for the background */
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+}
+
+.game .image-container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 200px;
+  height: calc(100% - 200px);
+  width: 100%;
+}
+
+.image {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+}
