@@ -37,6 +37,8 @@ html, body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -97,6 +99,8 @@ tr:last-child > * {
   border-top-right-radius: 5px;
   position: relative;
   overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-left: 1px solid black;
   border-top: 1px solid black;
@@ -330,6 +334,8 @@ tr:last-child > * {
 .pie {
   width: 50%;
   height: 100%;
+  -moz-transform-origin: 100% 50%;
+  -webkit-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
   position: absolute;
   background: red;
@@ -340,6 +346,8 @@ tr:last-child > * {
   z-index: 2;
   border-right: none;
   animation: rotate 25s linear;
+  -webkit-animation: rotate 25s linear;
+  -moz-animation: rotate 25s linear;
 }
 
 .fill.begin {
@@ -347,6 +355,8 @@ tr:last-child > * {
   z-index: 1;
   border-left: none;
   animation: opa 25s steps(1, end) reverse;
+  -webkit-animation: opa 25s steps(1, end) reverse;
+  -moz-animation: opa 25s steps(1, end) reverse;
   left: 50%;
   opacity: 0;
 }
@@ -363,6 +373,8 @@ tr:last-child > * {
   opacity: 1;
   background-color: white;
   animation: opa 25s steps(1, end);
+  -moz-animation: opa 25s steps(1, end);
+  -webkit-animation: opa 25s steps(1, end);
 }
 
 @keyframes rotate {
