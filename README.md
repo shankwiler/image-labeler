@@ -1,6 +1,7 @@
 # image-labeler
 
-[Live Site](image-labeler.heroku.com)
+[Live Site](http://image-labeler.herokuapp.com)
+
 ## Description
 
 This is a web app inspired by Google's now defunct image labeler. It pairs two users to label random images, and awards points based on the number of similar labels they choose.
