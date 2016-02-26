@@ -35,6 +35,7 @@ html, body {
   height: 80%;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   box-sizing: border-box;
 }
@@ -108,6 +109,7 @@ tr:last-child > * {
   max-width: 100%;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -126,6 +128,7 @@ tr:last-child > * {
 .arrow-right {
   top: 30%;
   left: 75%;
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -134,6 +137,7 @@ tr:last-child > * {
 .arrow-left {
   top: 30%;
   right: 75%;
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -180,6 +184,7 @@ tr:last-child > * {
   max-height: 10%;
   top: calc(90% - 6px); /* 6px worth of borders */
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   color: white;
   text-align: center;
@@ -198,6 +203,7 @@ tr:last-child > * {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: white;
   opacity: 1;
@@ -283,6 +289,7 @@ tr:last-child > * {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 40px;
   height: 60px;
@@ -302,6 +309,7 @@ tr:last-child > * {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -358,8 +366,14 @@ tr:last-child > * {
 }
 
 @keyframes rotate {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0%   {
+    -webkit-transform: rotate(0deg); 
+    transform: rotate(0deg); 
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); 
+  }
 }
 
 @keyframes opa {
@@ -460,5 +474,6 @@ tr:last-child > * {
   left: 50%;
   max-width: 100%;
   max-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
