@@ -199,11 +199,18 @@ function nextImage(cb) {
       // concat rather than assign just in case this function was
       // called by another socket, and some images had already been added
       images = images.concat(urls)
-      cb(images.pop())
+      cb(randImagesPop())
     })
   } else {
-    cb(images.pop())
+    cb(randImagesPop())
   }
+}
+
+function randImagesPop() {
+  let ind = Math.floor(Math.random() * images.length)
+  let popped = images[ind]
+  images = images.slice(0, ind).concat(images.slice(ind + 1, images.length))
+  return popped
 }
 
 function pullImages(cb) {
