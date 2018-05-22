@@ -130,14 +130,14 @@ function timeRounds(room) {
       // wait for both sockets to load the image before continuing
       // probably better accomplished with async, or something else
       let oneSocketLoaded = false
-      rooms[room]['sockets'][0].once('loadedImage', () => { 
+      rooms[room]['sockets'][0].once('loadedImage', () => {
         if (oneSocketLoaded) {
           runTimeRoundsAgain(room, roundLength, img)
         } else {
           oneSocketLoaded = true
         }
       })
-      rooms[room]['sockets'][1].once('loadedImage', () => { 
+      rooms[room]['sockets'][1].once('loadedImage', () => {
         if (oneSocketLoaded) {
           runTimeRoundsAgain(room, roundLength, img)
         } else {
@@ -189,7 +189,7 @@ function resetLabels(room, img) {
     rooms[room]['labels'][id].clear()
   })
 }
-  
+
 
 function nextImage(cb) {
   // callback accepts an image URL
@@ -228,7 +228,7 @@ function pullImages(cb) {
       let urls = JSON.parse(data)['photos'].filter((photoData) => {
         return !photoData['nsfw']
       }).map((photoData) => {
-        return photoData['image_url']
+        return photoData['image_url'][0]
       })
       if (urls.length === 0) {
         pullImages(cb)
