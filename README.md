@@ -1,6 +1,6 @@
 # image-labeler
 
-[Live Site](http://image-labeler.herokuapp.com)
+~~[Live Site](http://image-labeler.herokuapp.com)~~ Unfortunately, 500px has taken down its API, making this project currently unusable. I'll need to find another free and safe image provider for this game to be functional.
 
 ## Description
 
